@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{e5630caf-eeb5-439c-9ff0-2d8742c7e7b1}</ProjectGuid>
+    <RootNamespace>ZiroGL</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)include/ZiroGL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="include\ZiroGL\backend\render_backend.h" />
+    <ClInclude Include="include\ZiroGL\buffer\index_buffer.h" />
+    <ClInclude Include="include\ZiroGL\buffer\uniform_buffer.h" />
+    <ClInclude Include="include\ZiroGL\buffer\vertex_buffer.h" />
+    <ClInclude Include="include\ZiroGL\command\command_buffer.h" />
+    <ClInclude Include="include\ZiroGL\command\command_pool.h" />
+    <ClInclude Include="include\ZiroGL\core\device.h" />
+    <ClInclude Include="include\ZiroGL\core\instance.h" />
+    <ClInclude Include="include\ZiroGL\core\physical_device.h" />
+    <ClInclude Include="include\ZiroGL\descriptor\descriptor_pool.h" />
+    <ClInclude Include="include\ZiroGL\descriptor\descriptor_set.h" />
+    <ClInclude Include="include\ZiroGL\framebuffer\framebuffer.h" />
+    <ClInclude Include="include\ZiroGL\memory\memory_allocator.h" />
+    <ClInclude Include="include\ZiroGL\memory\memory_pool.h" />
+    <ClInclude Include="include\ZiroGL\pipeline\compute_pipeline.h" />
+    <ClInclude Include="include\ZiroGL\pipeline\graphics_pipeline.h" />
+    <ClInclude Include="include\ZiroGL\pipeline\ray_tracing_pipline.h" />
+    <ClInclude Include="include\ZiroGL\shader\shader.h" />
+    <ClInclude Include="include\ZiroGL\swapchain\swapchain.h" />
+    <ClInclude Include="include\ZiroGL\synchronization\barrier.h" />
+    <ClInclude Include="include\ZiroGL\synchronization\fence.h" />
+    <ClInclude Include="include\ZiroGL\synchronization\semaphore.h" />
+    <ClInclude Include="include\ZiroGL\texture\texture.h" />
+    <ClInclude Include="include\ZiroGL\windowing\event.h" />
+    <ClInclude Include="include\ZiroGL\windowing\input.h" />
+    <ClInclude Include="include\ZiroGL\windowing\platform\win32\win32_window.h" />
+    <ClInclude Include="include\ZiroGL\windowing\timer.h" />
+    <ClInclude Include="include\ZiroGL\windowing\window.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\backend\render_backend.cpp" />
+    <ClCompile Include="src\buffer\index_buffer.cpp" />
+    <ClCompile Include="src\buffer\uniform_buffer.cpp" />
+    <ClCompile Include="src\buffer\vertex_buffer.cpp" />
+    <ClCompile Include="src\command\command_buffer.cpp" />
+    <ClCompile Include="src\command\command_pool.cpp" />
+    <ClCompile Include="src\core\device.cpp" />
+    <ClCompile Include="src\core\instance.cpp" />
+    <ClCompile Include="src\core\physical_device.cpp" />
+    <ClCompile Include="src\descriptor\descriptor_bool.cpp" />
+    <ClCompile Include="src\descriptor\descriptor_set.cpp" />
+    <ClCompile Include="src\framebuffer\frame_buffer.cpp" />
+    <ClCompile Include="src\memory\memory_allocator.cpp" />
+    <ClCompile Include="src\memory\memory_pool.cpp" />
+    <ClCompile Include="src\pipeline\compute_pipeline.cpp" />
+    <ClCompile Include="src\pipeline\graphics_pipeline.cpp" />
+    <ClCompile Include="src\pipeline\ray_tracing_pipeline.cpp" />
+    <ClCompile Include="src\shader\shader.cpp" />
+    <ClCompile Include="src\swapchain\swapchain.cpp" />
+    <ClCompile Include="src\synchronization\barrier.cpp" />
+    <ClCompile Include="src\synchronization\fence.cpp" />
+    <ClCompile Include="src\synchronization\semaphore.cpp" />
+    <ClCompile Include="src\texture\texture.cpp" />
+    <ClCompile Include="src\windowing\event.cpp" />
+    <ClCompile Include="src\windowing\input.cpp" />
+    <ClCompile Include="src\windowing\platform\win32\win32_window.cpp" />
+    <ClCompile Include="src\windowing\timer.cpp" />
+    <ClCompile Include="src\windowing\window.cpp" />
+    <ClCompile Include="tests\main.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
