@@ -12,7 +12,7 @@ namespace ZiroGL {
 		Window(int width, int height, const std::wstring& title);
 		~Window();
 
-		void setKeyCallBack(std::function<void(int, int, int)> callback);
+		void setKeyCallback(std::function<void(int, int, int)> callback);
 		void setMouseCallback(std::function<void(int, int, int)> callback);
 		void setMouseMoveCallback(std::function<void(double, double)> callback);
 		void processEvents();

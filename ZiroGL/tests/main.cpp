@@ -2,6 +2,7 @@
 #include "core/instance.h"
 #include "core/physical_device.h"
 #include "windowing/window.h"
+#include "windowing/input.h"
 
 void keyCallback(int key, int scancode, int action) {
 	// Handle key events here
@@ -44,7 +45,7 @@ int main() {
 
 	ZiroGL::Window window(800, 600, L"ZiroGL Test Window");
 
-	window.setKeyCallBack(keyCallback);
+	window.setKeyCallback(keyCallback);
 	window.setMouseCallback(mouseCallback);
 	window.setMouseMoveCallback(mouseMoveCallback);
 

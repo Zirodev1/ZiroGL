@@ -38,7 +38,7 @@ namespace ZiroGL {
 		_windowInstances.erase(_hwnd);
 	}
 
-	void Window::setKeyCallBack(std::function<void(int, int, int)> callback) {
+	void Window::setKeyCallback(std::function<void(int, int, int)> callback) {
 		_keyCallback = callback;
 	}
 
