@@ -1,6 +1,22 @@
 #include <iostream>
 #include "core/instance.h"
 #include "core/physical_device.h"
+#include "windowing/window.h"
+
+void keyCallback(int key, int scancode, int action) {
+	// Handle key events here
+	std::cout << "Key: " << key << " Scancode: " << scancode << " Action: " << action << std::endl;
+}
+
+void mouseCallback(int xPos, int yPos, int button) {
+	// Handle mouse events here
+	std::cout << "Mouse Pos: (" << xPos << ", " << yPos << ") Button: " << button << std::endl;
+}
+
+void mouseMoveCallback(double x, double y) {
+	std::cout << "Mouse Move: x = " << x << ", y = " << y << std::endl;
+}
+
 
 int main() {
 	ZiroGL::ZGLInstance instance;
@@ -26,6 +42,26 @@ int main() {
 	std::shared_ptr<ZiroGL::Swapchain> swapchain = device->createSwapchain();
 	std::cout << "Created swapchain for the logical device" << std::endl;
 
+	ZiroGL::Window window(800, 600, L"ZiroGL Test Window");
+
+	window.setKeyCallBack(keyCallback);
+	window.setMouseCallback(mouseCallback);
+	window.setMouseMoveCallback(mouseMoveCallback);
+
+	MSG msg;
+	while (true) {
+		window.processEvents();
+		if (PeekMessage(&msg, NULL, 0, 0, PM_REMOVE)) {
+			if (msg.message == WM_QUIT) {
+				break;
+			}
+			TranslateMessage(&msg);
+			DispatchMessage(&msg);
+		}
+	}
+
 	instance.destroy();
 	return 0;
 }
+
+
